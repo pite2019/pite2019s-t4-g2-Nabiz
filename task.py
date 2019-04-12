@@ -23,3 +23,23 @@
 #
 #Delete these comments before commit!
 #Good luck.
+
+#!/usr/bin/python3
+
+from matrix import Matrix2x2
+
+
+def main():
+	
+	m1 = Matrix2x2(1,2,3,4)
+	m2 = Matrix2x2(4,3,2,1)
+	m3 = m1.matrixSum(m2)
+	print(m3)
+	m4 = m1.matrixProduct(m2)
+	print(m4)
+	print(m1.getDeterminant())
+	print(m1.matrixMuliplayScalar(3))
+
+if __name__ == '__main__':
+	main()
+
