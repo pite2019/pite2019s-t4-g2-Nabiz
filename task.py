@@ -26,19 +26,34 @@
 
 #!/usr/bin/python3
 
-from matrix import Matrix2x2
+from matrix import Matrix
 
 
 def main():
 	
-	m1 = Matrix2x2(1,2,3,4)
-	m2 = Matrix2x2(4,3,2,1)
-	m3 = m1.matrixSum(m2)
-	print(m3)
-	m4 = m1.matrixProduct(m2)
-	print(m4)
-	print(m1.getDeterminant())
+	m2x2 = Matrix(-2,1,0,-2)
+	print(m2x2)
+	print(m2x2[0,0])
+	m2x2[1,0] = 3
+	print(m2x2)
+
+	m1 = Matrix(1,2,3,4,5,6,7,8,9)
+	m2 = Matrix(9,8,7,6,5,4,3,2,1)
+	print(m1)
+
+	m5x5 = Matrix(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25)
+	print(m5x5)
+
+	print(m1.matrixSum(m2))
+	print(m1.matrixAddScalar(10))
 	print(m1.matrixMuliplayScalar(3))
+
+	print(m1.matrixMultiplayCorrespondingElements(m2))
+	print(m1.matrixProduct(m2))
+
+	print(m2x2.getDeterminant())
+	print(m1.getDeterminant())
+	print(m5x5.getDeterminant())
 
 if __name__ == '__main__':
 	main()
